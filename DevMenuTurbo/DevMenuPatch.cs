@@ -27,33 +27,33 @@ public class DevMenuTurboPatch
     {
         ref var self = ref __instance;
 
-        SetText(self._openMapList, "Maps");
-        SetText(self._nextStage, "Next Stage");
-        SetText(self._nextMap, "Next Map");
-        SetText(self._openGearList, "Gear List");
-        SetText(self._hideUI, "Hide UI");
-        SetText(self._getGold, "+10k Gold");
-        SetText(self._getDarkquartz, "+1k Quartz");
-        SetText(self._getBone, "+100 Bones");
-        SetText(self._getHeartQuartz, "+100 Core Quartz");
-        SetText(self._testMap, "Test Map");
-        SetText(self._awake, "Awaken");
-        SetText(self._damageBuff, "DMG Buff");
-        SetText(self._hp10k, "10k HP");
-        SetText(self._noCooldown, "No Cooldown");
-        SetText(self._shield10, "+10 Shield");
-        SetText(self._hardmodeToggle, "Hard Mode");
-        SetText(self._rerollSkill, "Reroll Skills");
-        SetText(self._timeScaleReset, "Reset");
-        SetText(self._infiniteRevive, "Immortal");
-        SetText(self._verification, "Map Heals");
-        SetText(self._right3, "All 3 buffs ->");
+        SetText(self._openMapList, "地图");
+        SetText(self._nextStage, "下一章节");
+        SetText(self._nextMap, "下一地图");
+        SetText(self._openGearList, "装备清单");
+        SetText(self._hideUI, "隐藏UI");
+        SetText(self._getGold, "+10000 金币");
+        SetText(self._getDarkquartz, "+1000 魔石");
+        SetText(self._getBone, "+100 碎骨");
+        SetText(self._getHeartQuartz, "+100 魔石核心");
+        SetText(self._testMap, "测试地图");
+        SetText(self._awake, "升级头骨");
+        SetText(self._damageBuff, "伤害Buff");
+        SetText(self._hp10k, "+10000 HP");
+        SetText(self._noCooldown, "无冷却");
+        SetText(self._shield10, "+10 护盾");
+        SetText(self._hardmodeToggle, "魔镜");
+        SetText(self._rerollSkill, "重置技能");
+        SetText(self._timeScaleReset, "重置");
+        SetText(self._infiniteRevive, "不朽");
+        SetText(self._verification, "血量显示");
+        SetText(self._right3, "所有Buff ->");
 
-        SetText2(self._hardmodeLevelSlider, "DM Level");
-        SetText2(self._hardmodeClearedLevelSlider, "DM Unlocked");
-        SetText2(self._timeScaleSlider, "Time Scale");
+        SetText2(self._hardmodeLevelSlider, "魔镜等级");
+        SetText2(self._hardmodeClearedLevelSlider, "魔镜解锁");
+        SetText2(self._timeScaleSlider, "加速");
 
-        SetText(self._gearList.transform, "Return");
+        SetText(self._gearList.transform, "返回");
 
         // Disable showing your time zone, just in case
         self._localNow.gameObject.SetActive(false);
