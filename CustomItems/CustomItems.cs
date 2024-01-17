@@ -26,8 +26,8 @@ public class CustomItems
             item.name = "DecidedlyPhysical";
             item.rarity = Rarity.Legendary;
 
-            item.itemName = "Orc King's Trusty Club";
-            item.itemDescription = "Increases <color=#F25D1C>Physical Attack</color> by 100%.\nYou cannot deal <color=#1787D8>Magic damage</color>.";
+            item.itemName = "巨魔之王的贴身长棍";
+            item.itemDescription = "<color=#F25D1C>物攻</color>加100%，\n不能造成<color=#1787D8>魔法伤害</color>。";
             item.itemLore = "The weapon of the strongest Orc. Once plated in gold, but he could never maintain it; his brute strength would shatter it.";
 
             item.prefabKeyword1 = Inscription.Key.Brave;
@@ -53,8 +53,8 @@ public class CustomItems
             item.name = "PurelyMagical";
             item.rarity = Rarity.Legendary;
 
-            item.itemName = "Raven Lord's Medallion";
-            item.itemDescription = "Increases <color=#1787D8>Magic Attack</color> by 100%.\nYou cannot deal <color=#F25D1C>Physical damage</color>.";
+            item.itemName = "暗鸦君主徽章";
+            item.itemDescription = "<color=#1787D8>魔攻</color>加100%，\n不能造成<color=#F25D1C>物理伤害</color>。";
             item.itemLore = "Able to control his army of raven souls, the Raven Lord has never faced a physical confrontation for the rest of his life.";
 
             item.prefabKeyword1 = Inscription.Key.Wisdom;
@@ -79,8 +79,8 @@ public class CustomItems
             item.name = "WisdomAndCourage";
             item.rarity = Rarity.Rare;
 
-            item.itemName = "Amulet of Duality";
-            item.itemDescription = "Increases <color=#F25D1C>Physical Attack</color> and <color=#1787D8>Magic Attack</color> by 40%.";
+            item.itemName = "对偶护符";
+            item.itemDescription = "加40%<color=#F25D1C>物攻</color>和<color=#1787D8>魔攻</color>。";
             item.itemLore = "With a taste for knowledge, undecided warrior Haxa could never succumb to pure brutality.";
 
             item.prefabKeyword1 = Inscription.Key.Brave;
@@ -99,9 +99,9 @@ public class CustomItems
             item.name = "ElementalMess";
             item.rarity = Rarity.Legendary;
 
-            item.itemName = "Quindent of Sadism";
-            item.itemDescription = "Attacks and skills have +10% chance to inflict any status effect: Poison, Wound, Stun, Freeze or Burn.\n"
-                                + "(Freeze and Stun bonuses have an internal cooldown of 4 seconds.)";
+            item.itemName = "五等分的哀伤";
+            item.itemDescription = "攻击和技能有10%概率附上五种异常状态的一种（毒血冰晕火)。\n"
+                                + "(冰和晕有内置4秒CD。)";
             item.itemLore = "The Demonlord Beelz becomes stronger by inflicting pain and suffering on everyone around him.";
 
             item.prefabKeyword1 = Inscription.Key.Execution;
@@ -139,10 +139,10 @@ public class CustomItems
             item.name = "FireAndIce";
             item.rarity = Rarity.Rare;
 
-            item.itemName = "Elementalist's Staff";
-            item.itemDescription = "Increases <color=#1787D8>Magic Attack</color> by 25%.\n"
-                                + "Skills have +5% chance to inflict Freeze or Burn.\n"
-                                + "(Freeze bonus has a cooldown of 2 seconds.)";
+            item.itemName = "元素师法杖";
+            item.itemDescription = "<color=#1787D8>魔攻</color>加25%，\n"
+                                + "技能有5%概率附上冰冻或者燃烧。\n"
+                                + "(冰冻有额外2秒CD。)";
             item.itemLore = "Only a true master of the elements could learn how to set ice on fire.";
 
             item.prefabKeyword1 = Inscription.Key.Arson;
@@ -183,9 +183,9 @@ public class CustomItems
             item.name = "PoisonAndBleed";
             item.rarity = Rarity.Rare;
 
-            item.itemName = "Poisoned Rope Dart";
-            item.itemDescription = "Increases <color=#F25D1C>Physical Attack</color> by 25%.\n"
-                                + "Skills have +5% chance to inflict Poison or Wound.";
+            item.itemName = "淬毒飞镖";
+            item.itemDescription = "<color=#F25D1C>物攻</color>加25%，\n"
+                                + "技能有5%概率附上中毒或者流血。";
             item.itemLore = "In skilled hands, this kunai brings death as swiftly as a Scorpion's sting.";
 
             item.prefabKeyword1 = Inscription.Key.Poisoning;
@@ -226,8 +226,8 @@ public class CustomItems
             item.name = "CarleonHeritage";
             item.rarity = Rarity.Common;
 
-            item.itemName = "Carleon's Flag";
-            item.itemDescription = "Increases <color=#F25D1C>Physical Attack</color> and <color=#1787D8>Magic Attack</color> by 15% for each Carleon item you own.";
+            item.itemName = "卡利恩旗帜";
+            item.itemDescription = "每拥有一件卡利恩装备，加15%<color=#F25D1C>物攻</color>和<color=#1787D8>魔攻</color>。";
             item.itemLore = "The symbol of Carleon's people brought strength during times of need.";
 
             item.prefabKeyword1 = Inscription.Key.Spoils;
@@ -256,10 +256,10 @@ public class CustomItems
             item.name = "BoneOfJumps";
             item.rarity = Rarity.Common;
 
-            item.itemName = "Bone Wing";
-            item.itemDescription = "Grants 1 extra jump and decreases gravity by 50%.\n"
-                                 + "(Gargoyle: reduces falling speed while attacking or using skills instead)\n"
-                                 + "Increases <color=#F25D1C>Physical Attack</color> and <color=#1787D8>Magic Attack</color> by 25% while in midair.";
+            item.itemName = "骨翼";
+            item.itemDescription = "加一次跳跃，获得50%的缓降。\n"
+                                 + "(使用石像鬼时在空中攻击或者释放技能降低下落速度)\n"
+                                 + "在空中加25%<color=#F25D1C>物攻</color>和<color=#1787D8>魔攻</color>。";
             item.itemLore = "Float like a butterfly, sting like a bee!";
 
             item.prefabKeyword1 = Inscription.Key.Bone;
@@ -290,8 +290,8 @@ public class CustomItems
             item.name = "TalariaOfMercury";
             item.rarity = Rarity.Unique;
 
-            item.itemName = "Talaria of Mercury";
-            item.itemDescription = "Grants 1 extra dash.\nIncreases movement speed by 50%.";
+            item.itemName = "水星足立健";
+            item.itemDescription = "加一次疾驰次数，获得50%移速。";
             item.itemLore = "Mortals could never achieve Hermes's speed. The key to his swiftness was his winged sandals.";
 
             item.prefabKeyword1 = Inscription.Key.Chase;
@@ -316,9 +316,9 @@ public class CustomItems
             item.gearTag = Characters.Gear.Gear.Tag.Omen;
             item.obtainable = false; // Omens should be unobtainable
 
-            item.itemName = "Omen: Root of All Evil";
-            item.itemDescription = "Increases <color=#F25D1C>Physical Attack</color> and <color=#1787D8>Magic Attack</color> by 1% for each 100 gold you have.\n"
-                                 + "Increases <color=#F25D1C>Physical Attack</color> and <color=#1787D8>Magic Attack</color> by 20% for each Treasure inscription you have.";
+            item.itemName = "预兆：万恶之根";
+            item.itemDescription = "每拥有100金币加1%<color=#F25D1C>物攻</color>和<color=#1787D8>魔攻</color>，\n"
+                                 + "每拥有1个宝物刻印加20%<color=#F25D1C>物攻</color>和<color=#1787D8>魔攻</color>。";
             item.itemLore = "Wealth is the true root of all power, for greed knows no bounds.";
 
             item.prefabKeyword1 = Inscription.Key.Omen;
@@ -351,8 +351,8 @@ public class CustomItems
             item.name = "PandorasBox";
             item.rarity = Rarity.Legendary;
 
-            item.itemName = "Pandora's Box";
-            item.itemDescription = "Upon pickup, replace each item with a random item of higher rarity.\nYou gain 500 gold per item destroyed.";
+            item.itemName = "水番多拉魔盒";
+            item.itemDescription = "拾起时会用高等级装备替换身上所有装备，\n每替换一件给500块钱。";
             item.itemLore = "\"This is my own special gift to you. Don't ever open it.\"";
 
             item.prefabKeyword1 = Inscription.Key.Heirloom;
@@ -372,8 +372,8 @@ public class CustomItems
             item.name = "QuintDamageBuff";
             item.rarity = Rarity.Rare;
 
-            item.itemName = "Claws of Raptor";
-            item.itemDescription = "Amplifies Quintessence damage by 30%.\nIncreases crit damage by 15%.";
+            item.itemName = "猛禽之爪";
+            item.itemDescription = "增幅30%精华伤害，增加15%暴击伤害。";
             item.itemLore = "No one has ever seen the monster that possessed such powerful claws and survived to tell the story.";
 
             item.prefabKeyword1 = Inscription.Key.Heritage;
@@ -404,8 +404,8 @@ public class CustomItems
             item.name = "MisfortuneBrawl";
             item.rarity = Rarity.Common;
 
-            item.itemName = "Spiked Brass Knuckles";
-            item.itemDescription = "Increases crit damage by 10%.\nIncreases crit rate by 5%.";
+            item.itemName = "黄铜指虎";
+            item.itemDescription = "增加10%暴击伤害，增加5%暴击率。";
             item.itemLore = "There is no such thing as a fair fight. Only a fight you win.";
 
             item.prefabKeyword1 = Inscription.Key.Misfortune;
@@ -424,8 +424,8 @@ public class CustomItems
             item.name = "CommonMasterpiece";
             item.rarity = Rarity.Common;
 
-            item.itemName = "Ornamental Axe";
-            item.itemDescription = "Increases <color=#F25D1C>Physical Attack</color> by 20%.";
+            item.itemName = "装饰斧";
+            item.itemDescription = "增加20%<color=#F25D1C>物攻</color>。";
             item.itemLore = "During times of distress, anything can be used as a weapon.";
 
             item.prefabKeyword1 = Inscription.Key.Masterpiece;
@@ -444,8 +444,8 @@ public class CustomItems
             item.obtainable = false; // Evolutions should not be obtainable by default
             item.rarity = Rarity.Common;
 
-            item.itemName = "Honorary Battle-Axe";
-            item.itemDescription = "Amplifies <color=#F25D1C>Physical Attack</color> by 20%.";
+            item.itemName = "荣耀战斧";
+            item.itemDescription = "增幅20%<color=#F25D1C>物攻</color>。";
             item.itemLore = "A weapon reforged by the fire of its warrior's soul.";
 
             item.prefabKeyword1 = Inscription.Key.Masterpiece;
@@ -468,8 +468,8 @@ public class CustomItems
             item.gearTag = Characters.Gear.Gear.Tag.Omen;
             item.obtainable = false; // Omens should be unobtainable
 
-            item.itemName = "Omen: Dark Tech Marvel";
-            item.itemDescription = "Picking up a Manatech part amplifies Skill Damage by 5% for 5 seconds (Up to 50%)";
+            item.itemName = "预兆：魔工学奇迹";
+            item.itemDescription = "5秒内每捡起一个零件增幅5%技能伤害，最多50%";
             item.itemLore = "A paradoxical machine that never seems to stop running.";
 
             item.prefabKeyword1 = Inscription.Key.Omen;
@@ -495,8 +495,8 @@ public class CustomItems
             item.name = "AdventurerKiller";
             item.rarity = Rarity.Unique;
 
-            item.itemName = "Soul Extractor";
-            item.itemDescription = "Upon killing an adventurer, this item disappears and that adventurer's Legendary item is dropped.";
+            item.itemName = "灵魂提取器";
+            item.itemDescription = "杀死冒险家必定掉落专属装备,掉落一次后该物品消失。";
             item.itemLore = "One's soul is the source of their most desirable posessions.";
 
             item.prefabKeyword1 = Inscription.Key.Duel;
@@ -518,8 +518,8 @@ public class CustomItems
             item.name = "SymbolOfConfidence";
             item.rarity = Rarity.Unique;
 
-            item.itemName = "Symbol of Confidence";
-            item.itemDescription = "Increases <color=#F25D1C>Physical Attack</color> and <color=#1787D8>Magic Attack</color> by up to 100%, equal to your current HP %.";
+            item.itemName = "自信的象征";
+            item.itemDescription = "每有1%血量加1%<color=#F25D1C>物攻</color>和<color=#1787D8>魔攻</color>，最多100%。";
             item.itemLore = "The blistering confidence brought by a strong defense makes the most powerful warriors.";
 
             item.prefabKeyword1 = Inscription.Key.Antique;
@@ -547,9 +547,9 @@ public class CustomItems
             item.gearTag = Characters.Gear.Gear.Tag.Omen;
             item.obtainable = false; // Omens should be unobtainable
 
-            item.itemName = "Omen: Cryptic Collectible";
-            item.itemDescription = "This item gains one random inscription.\n"
-                                 + "When you have 14 or more different inscriptions, transform this item.";
+            item.itemName = "预兆：神秘藏品";
+            item.itemDescription = "有一随机刻印，"
+                                 + "当有14种刻印时升级。";
             item.itemLore = "The heart of a true collector desires what it desires. Even when it doesn't know what lies inside.";
 
             item.prefabKeyword1 = Inscription.Key.Omen;
@@ -574,10 +574,10 @@ public class CustomItems
             item.obtainable = false; // Omens are not obtainable, and neither should be evolutions.
             item.rarity = Rarity.Unique;
 
-            item.itemName = "Omen: Idol of Insanity";
-            item.itemDescription = "This item gains one random inscription.\n"
-                                 + "Increases the number of each inscription you have by 1.\n"
-                                 + "Increases Collection Desire's inscription requirement by 1.";
+            item.itemName = "预兆：疯狂神像";
+            item.itemDescription = "有一随机刻印，"
+                                 + "每个持有刻印增加1个，"
+                                 + "收集癖对刻印需求降低1。";
             item.itemLore = "I DON'T DESIRE ANYTHING ANYMORE! I HAVE EVERYTHING I'VE EVER WANTED!";
 
             // Omens are unobtainable, so they are found by their tag.
