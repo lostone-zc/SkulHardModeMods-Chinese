@@ -142,7 +142,8 @@ public class CustomItems
             item.itemName = "元素师法杖";
             item.itemDescription = "<color=#1787D8>魔攻</color>加25%，\n"
                                 + "技能有5%概率附上冰冻或者燃烧。\n"
-                                + "(冰冻有额外2秒CD。)";
+                                + "(冰冻有额外2秒CD。)\n"
+                                + "如果<u>所有</u>敌人都处于燃烧状态，<color=#1787D8>魔攻</color>增幅20%。";
             item.itemLore = "Only a true master of the elements could learn how to set ice on fire.";
 
             item.prefabKeyword1 = Inscription.Key.Arson;
@@ -154,7 +155,13 @@ public class CustomItems
 
             Kind[] statuses = { Kind.Freeze, Kind.Burn };
 
-            item.abilities = new Ability[statuses.Length];
+            item.abilities = new Ability[statuses.Length + 1];
+
+            item.abilities[0] = new StatBonusIfAllEnemiesAreAffectedByStatus
+            {
+                _stats = new Stat.Values(new Stat.Value[] { new Stat.Value(Stat.Category.Percent, Stat.Kind.MagicAttackDamage, 1.20) }),
+                _status = Kind.Burn
+            };
 
             for (int i = 0; i < statuses.Length; i++)
             {
@@ -172,7 +179,7 @@ public class CustomItems
 
                 ability._status = new CharacterStatus.ApplyInfo(status);
 
-                item.abilities[i] = ability;
+                item.abilities[i + 1] = ability;
             }
 
             items.Add(item);
@@ -185,7 +192,8 @@ public class CustomItems
 
             item.itemName = "淬毒飞镖";
             item.itemDescription = "<color=#F25D1C>物攻</color>加25%，\n"
-                                + "技能有5%概率附上中毒或者流血。";
+                                + "技能有5%概率附上中毒或者流血。\n"
+                                + "如果<u>所有</u>敌人都处于中毒状态，<color=#F25D1C>物攻</color>增幅20%。";
             item.itemLore = "In skilled hands, this kunai brings death as swiftly as a Scorpion's sting.";
 
             item.prefabKeyword1 = Inscription.Key.Poisoning;
@@ -197,7 +205,13 @@ public class CustomItems
 
             Kind[] statuses = { Kind.Wound, Kind.Poison };
 
-            item.abilities = new Ability[statuses.Length];
+            item.abilities = new Ability[statuses.Length + 1];
+
+            item.abilities[0] = new StatBonusIfAllEnemiesAreAffectedByStatus
+            {
+                _stats = new Stat.Values(new Stat.Value[] { new Stat.Value(Stat.Category.Percent, Stat.Kind.PhysicalAttackDamage, 1.20) }),
+                _status = Kind.Poison
+            };
 
             for (int i = 0; i < statuses.Length; i++)
             {
@@ -215,7 +229,7 @@ public class CustomItems
 
                 ability._status = new CharacterStatus.ApplyInfo(status);
 
-                item.abilities[i] = ability;
+                item.abilities[i + 1] = ability;
             }
 
             items.Add(item);
@@ -287,6 +301,44 @@ public class CustomItems
 
         {
             var item = new CustomItemReference();
+            item.name = "BoneOfJumps_BoneUpgrade";
+            item.rarity = Rarity.Common;
+
+            item.obtainable = false;
+
+            item.itemName = "永恒骨头：翼";
+            item.itemDescription = "加两次跳跃，获得60%的缓降。\n"
+                                 + "(使用石像鬼时在空中攻击或者释放技能降低下落速度)\n"
+                                 + "在空中加50%<color=#F25D1C>物攻</color>和<color=#1787D8>魔攻</color>。";
+            item.itemLore = "Float like a cloud, sting like a swarm of bees!";
+
+            item.prefabKeyword1 = Inscription.Key.Bone;
+            item.prefabKeyword2 = Inscription.Key.Soar;
+
+            item.stats = new Stat.Values(new Stat.Value[] { });
+
+            AddAirJumpCount jumpAbility = new() { _count = 2 };
+
+            StatBonusByAirTime bonus = new();
+
+            bonus._timeToMaxStat = 0.01f;
+            bonus._remainTimeOnGround = 0.0f;
+            bonus._maxStat = new Stat.Values(new Stat.Value[] {
+                new Stat.Value(Stat.Category.PercentPoint, Stat.Kind.PhysicalAttackDamage, 0.5),
+                new Stat.Value(Stat.Category.PercentPoint, Stat.Kind.MagicAttackDamage, 0.5),
+            });
+
+            GravityScale gravityAbility = new() { amount = 0.4f };
+
+            item.abilities = new Ability[] { bonus, jumpAbility, gravityAbility };
+
+            item.forbiddenDrops = new[] { "BoneOfJumps" };
+
+            items.Add(item);
+        }
+
+        {
+            var item = new CustomItemReference();
             item.name = "TalariaOfMercury";
             item.rarity = Rarity.Unique;
 
@@ -336,6 +388,7 @@ public class CustomItems
                 },
                 new StatBonusByInscriptionCount(){
                     _keys = new[]{Inscription.Key.Treasure},
+                    _type = StatBonusByInscriptionCount.Type.Count,
                     _statPerStack = new Stat.Values(new Stat.Value[] {
                         new Stat.Value(Stat.Category.PercentPoint, Stat.Kind.PhysicalAttackDamage, 0.2),
                         new Stat.Value(Stat.Category.PercentPoint, Stat.Kind.MagicAttackDamage, 0.2),
@@ -370,10 +423,10 @@ public class CustomItems
         {
             var item = new CustomItemReference();
             item.name = "QuintDamageBuff";
-            item.rarity = Rarity.Rare;
+            item.rarity = Rarity.Unique;
 
             item.itemName = "猛禽之爪";
-            item.itemDescription = "增幅30%精华伤害，\n增加15%暴击伤害。";
+            item.itemDescription = "增加15%暴击伤害，\n精华伤害可以暴击。";
             item.itemLore = "No one has ever seen the monster that possessed such powerful claws and survived to tell the story.";
 
             item.prefabKeyword1 = Inscription.Key.Heritage;
@@ -383,17 +436,10 @@ public class CustomItems
                 new Stat.Value(Stat.Category.PercentPoint, Stat.Kind.CriticalDamage, 0.15),
             });
 
-            ModifyDamage quintDamage = new();
-
-            quintDamage._attackTypes = new();
-            quintDamage._attackTypes[Damage.MotionType.Quintessence] = true;
-
-            quintDamage._damageTypes = new(new[] { true, true, true, true, true });
-
-            quintDamage._damagePercent = 1.3f;
-
             item.abilities = new Ability[] {
-                quintDamage
+                new AdditionalCritReroll() {
+                    motionType = MotionType.Quintessence
+                }
             };
 
             items.Add(item);
@@ -519,13 +565,16 @@ public class CustomItems
             item.rarity = Rarity.Unique;
 
             item.itemName = "自信的象征";
-            item.itemDescription = "每有1%血量加1%<color=#F25D1C>物攻</color>和<color=#1787D8>魔攻</color>，最多100%。";
+            item.itemDescription = "减伤25%.\n"
+                                 + "每有1%血量加1%<color=#F25D1C>物攻</color>和<color=#1787D8>魔攻</color>，最多100%。";
             item.itemLore = "The blistering confidence brought by a strong defense makes the most powerful warriors.";
 
             item.prefabKeyword1 = Inscription.Key.Antique;
             item.prefabKeyword2 = Inscription.Key.Fortress;
 
-            item.stats = new Stat.Values(new Stat.Value[] { });
+            item.stats = new Stat.Values(new Stat.Value[]{
+                new Stat.Value(Stat.Category.Percent, Stat.Kind.TakingDamage, 0.75)
+            });
 
             StatBonusPerHPPercent bonus = new();
 
@@ -603,6 +652,45 @@ public class CustomItems
             items.Add(item);
         }
 
+        {
+            var item = new CustomItemReference();
+            item.name = "OmenClone_2_BoneUpgrade";
+            item.obtainable = false; // Omens are not obtainable, and neither should be evolutions.
+            item.rarity = Rarity.Unique;
+
+            item.itemName = "预兆：骨粉";
+            item.itemDescription = "每个持有刻印增加1个，\n"
+                                 + "收集癖对刻印需求增加1，\n"
+                                 + "骨头刻印的替换次数需求减1。";
+            item.itemLore = "Yo dawg, I heard you like Bone! So I put a Bone inside this Bone item so you can use more Bone against Evil Little Bone!";
+
+            // Omens are unobtainable, so they are found by their tag.
+            // So we don't put the Omen tag or inscription here, and leave for the evolution process to copy them.
+            // The Bone upgrade process works the same, copying the item's inscription. So we're fine here.
+            item.prefabKeyword1 = Inscription.Key.None;
+            item.prefabKeyword2 = Inscription.Key.Bone;
+
+            item.stats = new Stat.Values(new Stat.Value[] { });
+
+            item.abilities = new Ability[] {
+                new NerfCollectionDesire(){
+                    _count = 1
+                },
+                new ReduceBoneInscriptionRequirement(){
+                    _count = 1
+                }
+            };
+
+            item.extraComponents = new[] {
+                typeof(DelayedOmenAssigner), // To allow people dropping it from the DevMenu
+                typeof(CloneCloneClone),
+            };
+
+            item.forbiddenDrops = new[] { "OmenClone", "OmenClone_2" };
+
+            items.Add(item);
+        }
+
         return items;
     }
 
@@ -637,5 +725,18 @@ public class CustomItems
                                _to = new AssetReference(masterpieces[item.Key + "_2"].guid),
                            })
                            .ToList();
+    }
+
+    internal static List<Bone.SuperAbility.EnhancementMap> ListUpgradableBones()
+    {
+        var items = Items.ToDictionary(i => i.name);
+
+        return items.Where(item => items.ContainsKey(item.Key + "_BoneUpgrade"))
+                    .Select(item => new Bone.SuperAbility.EnhancementMap()
+                    {
+                        _from = new AssetReference(item.Value.guid),
+                        _to = new AssetReference(items[item.Key + "_BoneUpgrade"].guid),
+                    })
+                    .ToList();
     }
 }

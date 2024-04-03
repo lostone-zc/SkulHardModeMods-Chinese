@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net462</TargetFramework>
-    <AssemblyName>CustomItems</AssemblyName>
-    <Description>Archlich has a fixed Death Trap skill. Infinite bone is happy again!</Description>
-    <Version>1.1.0</Version>
+    <AssemblyName>DisplayRealCooldowns</AssemblyName>
+    <Description>Displays the real cooldown time for skills and quintessences</Description>
+    <Version>0.0.1</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>
@@ -12,7 +12,7 @@
       https://nuget.bepinex.dev/v3/index.json;
       https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
-    <RootNamespace>CustomItems</RootNamespace>
+    <RootNamespace>DisplayRealCooldowns</RootNamespace>
     <DebugSymbols>false</DebugSymbols>
     <DebugType>None</DebugType>
     <NoWarn>$(NoWarn);CS0436</NoWarn>
@@ -35,10 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Sprites/*.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <!-- Package to easily set everything as public -->
     <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.0" />
 
@@ -54,12 +50,8 @@
       <HintPath>$(SkulRoot)/Skul_Data/Managed/Plugins.Singletons.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="Plugins.Common" Publicize="true">
-      <HintPath>$(SkulRoot)/Skul_Data/Managed/Plugins.Common.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Unity.Addressables" Publicize="true">
-      <HintPath>$(SkulRoot)/Skul_Data/Managed/Unity.Addressables.dll</HintPath>
+    <Reference Include="Unity.TextMeshPro" Publicize="true">
+      <HintPath>$(SkulRoot)/Skul_Data/Managed/Unity.TextMeshPro.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
