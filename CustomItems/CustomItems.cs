@@ -577,7 +577,7 @@ public class CustomItems
             item.itemName = "预兆：疯狂神像";
             item.itemDescription = "有一随机刻印，\n"
                                  + "每个持有刻印增加1个，\n"
-                                 + "收集癖对刻印需求降低1。";
+                                 + "收集癖对刻印需求增加1。";
             item.itemLore = "I DON'T DESIRE ANYTHING ANYMORE! I HAVE EVERYTHING I'VE EVER WANTED!";
 
             // Omens are unobtainable, so they are found by their tag.
