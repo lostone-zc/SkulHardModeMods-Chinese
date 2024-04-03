@@ -515,7 +515,7 @@ public class CustomItems
             item.obtainable = false; // Omens should be unobtainable
 
             item.itemName = "预兆：魔工学奇迹";
-            item.itemDescription = "5秒内每捡起一个零件增幅5%技能伤害，最多50%";
+            item.itemDescription = "5秒内每捡起一个零件增幅5%技能伤害，最多50%。";
             item.itemLore = "A paradoxical machine that never seems to stop running.";
 
             item.prefabKeyword1 = Inscription.Key.Omen;
@@ -542,7 +542,7 @@ public class CustomItems
             item.rarity = Rarity.Unique;
 
             item.itemName = "灵魂提取器";
-            item.itemDescription = "杀死冒险家必定掉落专属装备,掉落一次后该物品消失。";
+            item.itemDescription = "杀死冒险家必定掉落专属装备，掉落一次后该物品消失。";
             item.itemLore = "One's soul is the source of their most desirable posessions.";
 
             item.prefabKeyword1 = Inscription.Key.Duel;
@@ -565,7 +565,7 @@ public class CustomItems
             item.rarity = Rarity.Unique;
 
             item.itemName = "自信的象征";
-            item.itemDescription = "减伤25%.\n"
+            item.itemDescription = "减伤25%。\n"
                                  + "每有1%血量加1%<color=#F25D1C>物攻</color>和<color=#1787D8>魔攻</color>，最多100%。";
             item.itemLore = "The blistering confidence brought by a strong defense makes the most powerful warriors.";
 
