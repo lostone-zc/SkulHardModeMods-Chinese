@@ -373,7 +373,7 @@ public class CustomItems
             item.rarity = Rarity.Rare;
 
             item.itemName = "猛禽之爪";
-            item.itemDescription = "增幅30%精华伤害，增加15%暴击伤害。";
+            item.itemDescription = "增幅30%精华伤害，\n增加15%暴击伤害。";
             item.itemLore = "No one has ever seen the monster that possessed such powerful claws and survived to tell the story.";
 
             item.prefabKeyword1 = Inscription.Key.Heritage;
@@ -405,7 +405,7 @@ public class CustomItems
             item.rarity = Rarity.Common;
 
             item.itemName = "黄铜指虎";
-            item.itemDescription = "增加10%暴击伤害，增加5%暴击率。";
+            item.itemDescription = "增加10%暴击伤害，\n增加5%暴击率。";
             item.itemLore = "There is no such thing as a fair fight. Only a fight you win.";
 
             item.prefabKeyword1 = Inscription.Key.Misfortune;
@@ -548,7 +548,7 @@ public class CustomItems
             item.obtainable = false; // Omens should be unobtainable
 
             item.itemName = "预兆：神秘藏品";
-            item.itemDescription = "有一随机刻印，"
+            item.itemDescription = "有一随机刻印，\n"
                                  + "当有14种刻印时升级。";
             item.itemLore = "The heart of a true collector desires what it desires. Even when it doesn't know what lies inside.";
 
@@ -575,8 +575,8 @@ public class CustomItems
             item.rarity = Rarity.Unique;
 
             item.itemName = "预兆：疯狂神像";
-            item.itemDescription = "有一随机刻印，"
-                                 + "每个持有刻印增加1个，"
+            item.itemDescription = "有一随机刻印，\n"
+                                 + "每个持有刻印增加1个，\n"
                                  + "收集癖对刻印需求降低1。";
             item.itemLore = "I DON'T DESIRE ANYTHING ANYMORE! I HAVE EVERYTHING I'VE EVER WANTED!";
 
